@@ -1,11 +1,47 @@
-<div align="center">
+# EireLens 🐑📷
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+Balade contemplative en **3D low-poly** dans une **Irlande miniature** fidèle à la vraie
+géographie, avec un **mouton de compagnie** un peu râleur. Le but : photographier les lieux
+emblématiques de l'île (Falaises de Moher, Chaussée des Géants, Fungie, Titanic Belfast, Glendalough…),
+gagner des pièces pour acheter vélo, cheval, bateau et ULM, et ouvrir une à une les 4 zones
+(Sud → Irlande du Nord → Ouest → Dublin), reliées par le train.
 
-  <h1>Built with AI Studio</h2>
+Jouable au clavier, à la **manette** et au **tactile**, dans le navigateur, en plein écran sur **iPad**.
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## Démarrer en local
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+```bash
+npm install
+npm run dev      # http://localhost:3000
+npm run lint     # vérification TypeScript
+npm run build    # version de production dans dist/
+```
 
-</div>
+## Commandes
+
+| | Manette | Clavier |
+|---|---|---|
+| Marcher / caméra | sticks | ZQSD-WASD / flèches, souris |
+| Galoper sur le mouton | maintenir B | maintenir Maj |
+| Appareil photo / déclencher | Y / A | C / Espace |
+| Zoom | RT / LT | E / A, molette |
+| Caresser le mouton · Prendre le train (près d'une gare) | A | Espace |
+| Véhicules · Carte · Album · Pause | X · Select · ↓ · Start | V · M · B · Échap |
+
+## Documentation
+
+| Pour… | Lire |
+|---|---|
+| **L'IA qui développe (Gemini / AI Studio)** — à lire en premier | [`AGENTS.md`](AGENTS.md) |
+| Comprendre le jeu | [`docs/GDD.md`](docs/GDD.md) |
+| Comprendre le code | [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) |
+| Ajouter un monument / un véhicule | [`docs/HOWTO_AJOUTER_UN_MONUMENT.md`](docs/HOWTO_AJOUTER_UN_MONUMENT.md) · [`docs/HOWTO_AJOUTER_UN_VEHICULE.md`](docs/HOWTO_AJOUTER_UN_VEHICULE.md) |
+| Modéliser en 3D (recettes, échelle, animation) + **Atelier 3D** (`?atelier`) | [`docs/GUIDE_MODELISATION.md`](docs/GUIDE_MODELISATION.md) |
+| Savoir quoi faire ensuite (prompts prêts à coller) | [`docs/ROADMAP.md`](docs/ROADMAP.md) |
+| Mettre en ligne (GitHub, AI Studio, iPad) | [`docs/DEPLOIEMENT.md`](docs/DEPLOIEMENT.md) |
+
+## Crédits
+
+- Contours de l'Irlande, lacs et Shannon : [Natural Earth](https://www.naturalearthdata.com/) (domaine public),
+  convertis par `tools/build_geo.py`.
+- Tout le reste (modèles 3D, sons, musique) est généré en code.
